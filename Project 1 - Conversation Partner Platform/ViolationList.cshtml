@@ -1,0 +1,12 @@
+﻿@model CPP2.Models.ViolationViewModel
+
+@{
+
+    foreach(var User in Model.List)
+    {
+        <li>@User.Email</li>
+
+    }
+
+    Html.DropDownList("Email", (IEnumerable<SelectListItem>)ViewData["ViolationList"], htmlAttributes: new { @class = "form-control" });
+}
